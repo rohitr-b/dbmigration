@@ -38,7 +38,7 @@ CNT_EXP=0
 while [ $SCPRET -ne 0 ]; do
   let CNT_EXP=CNT_EXP+1
   echo "Copying file $DATA_EXP_FILE - Attempt $CNT_EXP"
-  scp -o ConnectTimeout=5 $DATA_EXP_FILE $DATA_ROW_CNT db2insta@204.67.168.198:$DATA_IMP_PATH
+  scp -o ConnectTimeout=5 $DATA_EXP_FILE $DATA_ROW_CNT db2insta@IP.00.168.000:$DATA_IMP_PATH
   SCPRET=$?
   if [ $SCPRET -eq 0 ]; then
     echo "Finished Copy. Error Code: $SCPRET"
