@@ -50,7 +50,7 @@ while [ $SCPRET -ne 0 ]; do
     CNT_SSH=1
     while [ $SSHRET -ne 0 ]; do
       echo "Getting Target chksum. Attempt: $CNT_SSH"
-      ssh -n db2insta@204.67.168.198 "/usr/bin/md5sum $DATA_IMP_PATH/$SCHEMA_NAME-$TABLE_NAME.ixf" > $CHK_FILE_TARG
+      ssh -n db2insta@IP.ADDR.168.00 "/usr/bin/md5sum $DATA_IMP_PATH/$SCHEMA_NAME-$TABLE_NAME.ixf" > $CHK_FILE_TARG
       SSHRET=$?
       let CNT_SSH=CNT_SSH+1
     done
